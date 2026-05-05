@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    font-variant-numeric: tabular-nums;
+    color-scheme: dark;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -6,11 +6,13 @@ import { createClient } from '@/lib/supabase/client'
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
   const supabase = createClient()
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setStatus('loading')
+    setErrorMsg('')
 
     const { error } = await supabase.auth.signInWithOtp({
       email,
@@ -19,7 +21,16 @@ export default function LoginPage() {
       },
     })
 
-    setStatus(error ? 'error' : 'sent')
+    if (error) {
+      const msg =
+        error.status === 429
+          ? 'Too many requests — wait a few minutes before trying again.'
+          : error.message
+      setErrorMsg(msg)
+      setStatus('error')
+    } else {
+      setStatus('sent')
+    }
   }
 
   return (
@@ -51,9 +62,7 @@ export default function LoginPage() {
               />
             </div>
 
-            {status === 'error' && (
-              <p className="text-sm text-red-400">Something went wrong. Try again.</p>
-            )}
+            {status === 'error' && <p className="text-sm text-red-400">{errorMsg}</p>}
 
             <button
               type="submit"

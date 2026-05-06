@@ -11,10 +11,14 @@ export interface DailyLogInput {
   journaled: boolean // derived: journal_entries row exists for this date
 }
 
-export interface Last7DaysInput {
-  logs: DailyLogInput[]
-  workoutDates: string[] // ISO date strings when a workout was logged
-  readingMinutes: number
+export interface ProductivityInput {
   applicationsThisWeek: number
+  skillsPracticeHours: number // manual or derived from deep work sessions
+  readingMinutes: number
   deepWorkHours: number
+}
+
+export interface HabitLogEntry {
+  date: string // ISO date YYYY-MM-DD
+  completed: boolean
 }

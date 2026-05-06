@@ -31,6 +31,7 @@ export interface Database {
           type?: string
           user_id?: string
         }
+        Relationships: []
       }
       applications: {
         Row: {
@@ -69,6 +70,7 @@ export interface Database {
           status?: 'applied' | 'screening' | 'interview' | 'offer' | 'rejected' | 'ghosted'
           user_id?: string
         }
+        Relationships: []
       }
       badges: {
         Row: {
@@ -95,6 +97,7 @@ export interface Database {
           user_id?: string
           week_start?: string | null
         }
+        Relationships: []
       }
       books: {
         Row: {
@@ -136,6 +139,7 @@ export interface Database {
           total_pages?: number | null
           user_id?: string
         }
+        Relationships: []
       }
       chess_ratings: {
         Row: {
@@ -159,6 +163,7 @@ export interface Database {
           rated_on?: string
           user_id?: string
         }
+        Relationships: []
       }
       daily_logs: {
         Row: {
@@ -218,6 +223,7 @@ export interface Database {
           user_id?: string
           water_glasses?: number | null
         }
+        Relationships: []
       }
       expenses: {
         Row: {
@@ -247,6 +253,7 @@ export interface Database {
           note?: string | null
           user_id?: string
         }
+        Relationships: []
       }
       eye_observations: {
         Row: {
@@ -276,6 +283,7 @@ export interface Database {
           triggers?: 'fatigue' | 'alcohol' | 'screens' | 'none' | null
           user_id?: string
         }
+        Relationships: []
       }
       goals: {
         Row: {
@@ -314,6 +322,7 @@ export interface Database {
           title?: string
           user_id?: string
         }
+        Relationships: []
       }
       habit_logs: {
         Row: {
@@ -340,6 +349,7 @@ export interface Database {
           log_date?: string
           user_id?: string
         }
+        Relationships: []
       }
       habits: {
         Row: {
@@ -369,6 +379,7 @@ export interface Database {
           target_per_week?: number
           user_id?: string
         }
+        Relationships: []
       }
       income: {
         Row: {
@@ -395,6 +406,7 @@ export interface Database {
           source?: string
           user_id?: string
         }
+        Relationships: []
       }
       journal_entries: {
         Row: {
@@ -427,6 +439,7 @@ export interface Database {
           user_id?: string
           went_well?: string | null
         }
+        Relationships: []
       }
       looksmax_log: {
         Row: {
@@ -462,6 +475,7 @@ export interface Database {
           user_id?: string
           whitening?: boolean
         }
+        Relationships: []
       }
       monthly_reviews: {
         Row: {
@@ -488,6 +502,7 @@ export interface Database {
           one_to_drop?: string | null
           user_id?: string
         }
+        Relationships: []
       }
       progress_photos: {
         Row: {
@@ -523,6 +538,7 @@ export interface Database {
           taken_at?: string
           user_id?: string
         }
+        Relationships: []
       }
       reading_sessions: {
         Row: {
@@ -552,6 +568,7 @@ export interface Database {
           session_date?: string
           user_id?: string
         }
+        Relationships: []
       }
       social_log: {
         Row: {
@@ -578,6 +595,7 @@ export interface Database {
           notes?: string | null
           user_id?: string
         }
+        Relationships: []
       }
       supplements_log: {
         Row: {
@@ -619,6 +637,7 @@ export interface Database {
           user_id?: string
           vitamin_d?: boolean
         }
+        Relationships: []
       }
       weekly_reviews: {
         Row: {
@@ -651,6 +670,7 @@ export interface Database {
           what_broke?: string | null
           what_worked?: string | null
         }
+        Relationships: []
       }
       weight_logs: {
         Row: {
@@ -674,6 +694,7 @@ export interface Database {
           user_id?: string
           weight_kg?: number
         }
+        Relationships: []
       }
       workout_sets: {
         Row: {
@@ -709,6 +730,7 @@ export interface Database {
           weight_kg?: number | null
           workout_id?: string
         }
+        Relationships: []
       }
       workouts: {
         Row: {
@@ -738,6 +760,7 @@ export interface Database {
           user_id?: string
           workout_date?: string
         }
+        Relationships: []
       }
     }
     Views: Record<string, never>
